@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details — Akwaaba Threads</title>
+  <meta name="description" content="View product details, images, and reviews for Ghanaian clothing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container product-detail">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> / <a href="index.html#products">Shop</a> / <span id="breadcrumbProduct">Product</span>
+    </nav>
+
+    <div id="productDetailContent" class="product-detail-grid">
+      <!-- Content will be loaded by JavaScript -->
+    </div>
+
+    <section class="reviews-section">
+      <h3>Customer Reviews</h3>
+      <div id="reviewsContainer">
+        <!-- Reviews will be loaded by JavaScript -->
+      </div>
+      
+      <div class="review-form">
+        <h4>Write a Review</h4>
+        <form id="reviewForm">
+          <div class="rating-input">
+            <label>Rating:</label>
+            <div class="star-rating" id="starRating">
+              <span data-rating="1">★</span>
+              <span data-rating="2">★</span>
+              <span data-rating="3">★</span>
+              <span data-rating="4">★</span>
+              <span data-rating="5">★</span>
+            </div>
+          </div>
+          <input type="text" id="reviewerName" placeholder="Your Name" required>
+          <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+          <button type="submit" class="btn primary">Submit Review</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <h3>You Might Also Like</h3>
+      <div id="relatedProducts" class="product-grid">
+        <!-- Related products will be loaded by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">GHS 0.00</strong>
+      </div>
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Wishlist Modal -->
+  <div id="wishlistModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <h3>Added to Wishlist!</h3>
+      <p>Item has been saved to your wishlist.</p>
+      <button class="btn primary" onclick="closeModal('wishlistModal')">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script>
+    window.PAYSTACK_PUBLIC_KEY = 'YOUR_PAYSTACK_PUBLIC_KEY_HERE';
+  </script>
+</body>
+</html>

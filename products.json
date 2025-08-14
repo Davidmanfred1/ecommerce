@@ -1,0 +1,261 @@
+[
+  {
+    "id": "kente-shirt-1",
+    "name": "Kente Pattern Shirt",
+    "category": "Shirts",
+    "price": 220,
+    "image": "assets/images/kente-shirt.svg",
+    "images": [
+      "assets/images/kente-shirt.svg",
+      "assets/images/kente-shirt-2.svg",
+      "assets/images/kente-shirt-3.svg"
+    ],
+    "description": "Authentic Kente-inspired shirt featuring traditional Ghanaian patterns. Made from premium cotton blend for comfort and durability.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "stock": 15,
+    "rating": 4.8,
+    "reviews": 24,
+    "features": ["100% Cotton", "Machine Washable", "Traditional Kente Design", "Comfortable Fit"]
+  },
+  {
+    "id": "ghana-coat-of-arms-tee",
+    "name": "Ghana Coat of Arms Premium Tee",
+    "category": "Shirts",
+    "price": 135,
+    "originalPrice": 160,
+    "image": "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Coat+of+Arms",
+    "images": [
+      "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Coat+of+Arms",
+      "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Coat+of+Arms+Back"
+    ],
+    "description": "Premium black tee featuring Ghana's official coat of arms with golden eagles and the national motto. Perfect for showing national pride.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": ["Black", "Navy", "Forest Green"],
+    "variants": [
+      {"color": "Black", "image": "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Coat+Black", "stock": 18},
+      {"color": "Navy", "image": "https://via.placeholder.com/300x400/000080/FFD700?text=Ghana+Coat+Navy", "stock": 14},
+      {"color": "Forest Green", "image": "https://via.placeholder.com/300x400/228B22/FFD700?text=Ghana+Coat+Green", "stock": 10}
+    ],
+    "stock": 42,
+    "rating": 4.9,
+    "reviews": 38,
+    "features": ["Premium Cotton Blend", "Official Coat of Arms Design", "Comfortable Fit", "Patriotic Symbol"],
+    "tags": ["patriotic", "casual", "ghana", "coat of arms", "official"],
+    "isNew": true,
+    "isOnSale": true,
+    "isFeatured": true
+  },
+  {
+    "id": "adinkra-cap",
+    "name": "Adinkra Cap",
+    "category": "Accessories",
+    "price": 95,
+    "image": "assets/images/adinkra-cap.svg",
+    "images": [
+      "assets/images/adinkra-cap.svg",
+      "assets/images/adinkra-cap-2.svg"
+    ],
+    "description": "Traditional Adinkra symbols embroidered on a premium cap. Represents wisdom and cultural heritage.",
+    "sizes": ["One Size"],
+    "stock": 12,
+    "rating": 4.7,
+    "reviews": 9,
+    "features": ["Adjustable Strap", "Embroidered Design", "Premium Materials", "Cultural Significance"]
+  },
+  {
+    "id": "ankara-dress",
+    "name": "Ankara Print Dress",
+    "category": "Dresses",
+    "price": 280,
+    "image": "assets/images/ankara-dress.svg",
+    "images": [
+      "assets/images/ankara-dress.svg",
+      "assets/images/ankara-dress-2.svg",
+      "assets/images/ankara-dress-3.svg"
+    ],
+    "description": "Elegant Ankara print dress perfect for special occasions. Features vibrant African patterns and modern tailoring.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "stock": 6,
+    "rating": 4.9,
+    "reviews": 31,
+    "features": ["Authentic Ankara Fabric", "Tailored Fit", "Vibrant Colors", "Special Occasion Wear"]
+  },
+  {
+    "id": "kente-scarf",
+    "name": "Kente Silk Scarf",
+    "category": "Accessories",
+    "price": 120,
+    "image": "assets/images/kente-scarf.svg",
+    "images": [
+      "assets/images/kente-scarf.svg",
+      "assets/images/kente-scarf-2.svg"
+    ],
+    "description": "Luxurious silk scarf featuring traditional Kente patterns. Perfect accessory for any outfit.",
+    "sizes": ["One Size"],
+    "stock": 20,
+    "rating": 4.5,
+    "reviews": 12,
+    "features": ["100% Silk", "Traditional Patterns", "Versatile Styling", "Gift Ready"]
+  },
+  {
+    "id": "dashiki-shirt",
+    "name": "Dashiki Shirt",
+    "category": "Shirts",
+    "price": 180,
+    "originalPrice": 220,
+    "image": "assets/images/dashiki-shirt.svg",
+    "images": [
+      "assets/images/dashiki-shirt.svg",
+      "assets/images/dashiki-shirt-2.svg"
+    ],
+    "description": "Classic Dashiki shirt with intricate embroidered patterns. Comfortable and stylish for any occasion.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Black", "Navy", "Brown"],
+    "variants": [
+      {"color": "Black", "image": "assets/images/dashiki-shirt.svg", "stock": 0},
+      {"color": "Navy", "image": "assets/images/dashiki-shirt-navy.svg", "stock": 5},
+      {"color": "Brown", "image": "assets/images/dashiki-shirt-brown.svg", "stock": 3}
+    ],
+    "stock": 8,
+    "rating": 4.4,
+    "reviews": 15,
+    "features": ["Embroidered Details", "Breathable Fabric", "Cultural Heritage", "Comfortable Fit"],
+    "tags": ["traditional", "embroidered", "cultural", "african"],
+    "isNew": false,
+    "isOnSale": true,
+    "isFeatured": true
+  },
+  {
+    "id": "professional-business-suit",
+    "name": "Professional Business Suit",
+    "category": "Suits",
+    "price": 525,
+    "originalPrice": 650,
+    "image": "https://via.placeholder.com/300x400/1a1a1a/FFFFFF?text=Professional+Suit",
+    "images": [
+      "https://via.placeholder.com/300x400/1a1a1a/FFFFFF?text=Professional+Suit",
+      "https://via.placeholder.com/300x400/1a1a1a/FFFFFF?text=Professional+Suit+Back"
+    ],
+    "description": "Premium business suit perfect for professional settings. Tailored fit with modern styling and exceptional quality.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Navy", "Charcoal", "Black"],
+    "variants": [
+      {"color": "Navy", "image": "https://via.placeholder.com/300x400/000080/FFFFFF?text=Navy+Suit", "stock": 8},
+      {"color": "Charcoal", "image": "https://via.placeholder.com/300x400/36454F/FFFFFF?text=Charcoal+Suit", "stock": 6},
+      {"color": "Black", "image": "https://via.placeholder.com/300x400/000000/FFFFFF?text=Black+Suit", "stock": 4}
+    ],
+    "stock": 18,
+    "rating": 4.8,
+    "reviews": 15,
+    "features": ["Tailored Fit", "Premium Wool Blend", "Professional Style", "Modern Cut"],
+    "tags": ["formal", "business", "suit", "professional", "modern"],
+    "isNew": true,
+    "isOnSale": true,
+    "isFeatured": true
+  },
+  {
+    "id": "african-print-jumpsuit",
+    "name": "African Print Jumpsuit",
+    "category": "Jumpsuits",
+    "price": 320,
+    "image": "assets/images/african-jumpsuit.svg",
+    "images": [
+      "assets/images/african-jumpsuit.svg",
+      "assets/images/african-jumpsuit-2.svg"
+    ],
+    "description": "Stylish jumpsuit featuring vibrant African prints. Modern cut with traditional patterns.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Multi-color"],
+    "variants": [
+      {"color": "Multi-color", "image": "assets/images/african-jumpsuit.svg", "stock": 7}
+    ],
+    "stock": 7,
+    "rating": 4.7,
+    "reviews": 12,
+    "features": ["Wide Leg Design", "Elastic Waist", "Vibrant Prints", "Comfortable Fit"],
+    "tags": ["jumpsuit", "african print", "modern", "vibrant"],
+    "isNew": true,
+    "isOnSale": false,
+    "isFeatured": false
+  },
+  {
+    "id": "traditional-smock",
+    "name": "Traditional Smock",
+    "category": "Traditional",
+    "price": 280,
+    "image": "assets/images/traditional-smock.svg",
+    "images": [
+      "assets/images/traditional-smock.svg",
+      "assets/images/traditional-smock-2.svg"
+    ],
+    "description": "Authentic Ghanaian smock with traditional embroidery. Handcrafted by local artisans.",
+    "sizes": ["M", "L", "XL", "XXL"],
+    "colors": ["White", "Cream"],
+    "variants": [
+      {"color": "White", "image": "assets/images/traditional-smock.svg", "stock": 5},
+      {"color": "Cream", "image": "assets/images/traditional-smock-cream.svg", "stock": 3}
+    ],
+    "stock": 8,
+    "rating": 4.8,
+    "reviews": 6,
+    "features": ["Hand Embroidered", "Traditional Cut", "Artisan Made", "Cultural Significance"],
+    "tags": ["traditional", "smock", "handmade", "artisan", "cultural"],
+    "isNew": false,
+    "isOnSale": false,
+    "isFeatured": true
+  },
+  {
+    "id": "ankara-headwrap",
+    "name": "Ankara Headwrap Set",
+    "category": "Accessories",
+    "price": 65,
+    "image": "assets/images/ankara-headwrap.svg",
+    "images": [
+      "assets/images/ankara-headwrap.svg",
+      "assets/images/ankara-headwrap-2.svg"
+    ],
+    "description": "Set of 3 Ankara headwraps in coordinating patterns. Perfect for styling versatility.",
+    "sizes": ["One Size"],
+    "colors": ["Multi-pack"],
+    "variants": [
+      {"color": "Multi-pack", "image": "assets/images/ankara-headwrap.svg", "stock": 15}
+    ],
+    "stock": 15,
+    "rating": 4.6,
+    "reviews": 22,
+    "features": ["Set of 3", "Coordinating Patterns", "Versatile Styling", "Premium Cotton"],
+    "tags": ["headwrap", "ankara", "accessories", "set", "styling"],
+    "isNew": false,
+    "isOnSale": true,
+    "isFeatured": false
+  },
+  {
+    "id": "ghana-flag-distressed-tee",
+    "name": "Ghana Flag Distressed Tee",
+    "category": "Shirts",
+    "price": 125,
+    "originalPrice": 145,
+    "image": "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Flag+Distressed",
+    "images": [
+      "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Flag+Distressed",
+      "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Flag+Back"
+    ],
+    "description": "Vintage-style distressed Ghana flag design with 'Ghana' script. Perfect for casual wear and showing your Ghanaian heritage with style.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": ["Black", "Navy", "Charcoal"],
+    "variants": [
+      {"color": "Black", "image": "https://via.placeholder.com/300x400/000000/FFD700?text=Ghana+Flag+Black", "stock": 20},
+      {"color": "Navy", "image": "https://via.placeholder.com/300x400/000080/FFD700?text=Ghana+Flag+Navy", "stock": 16},
+      {"color": "Charcoal", "image": "https://via.placeholder.com/300x400/36454F/FFD700?text=Ghana+Flag+Charcoal", "stock": 12}
+    ],
+    "stock": 48,
+    "rating": 4.7,
+    "reviews": 31,
+    "features": ["Vintage Distressed Design", "Soft Cotton Blend", "Ghana Flag Colors", "Comfortable Fit"],
+    "tags": ["patriotic", "vintage", "ghana", "flag", "distressed", "casual"],
+    "isNew": true,
+    "isOnSale": true,
+    "isFeatured": true
+  }
+]
+

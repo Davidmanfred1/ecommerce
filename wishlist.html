@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Wishlist — Akwaaba Threads</title>
+  <meta name="description" content="Your saved favorite products from Akwaaba Threads.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script defer src="wishlist.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container wishlist-page">
+    <h2>My Wishlist</h2>
+    <div id="wishlistContent">
+      <!-- Wishlist items will be loaded here -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">GHS 0.00</strong>
+      </div>
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    window.PAYSTACK_PUBLIC_KEY = 'YOUR_PAYSTACK_PUBLIC_KEY_HERE';
+  </script>
+</body>
+</html>

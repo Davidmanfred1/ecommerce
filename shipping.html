@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shipping Information — Akwaaba Threads</title>
+  <meta name="description" content="Shipping rates, delivery times, and policies for Akwaaba Threads.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container" style="margin:40px auto;">
+    <h1>Shipping Information</h1>
+    
+    <section style="margin:40px 0;">
+      <h2>Delivery Times</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:20px 0;">
+        <div style="padding:20px;border:1px solid #eee;border-radius:var(--radius);">
+          <h3 style="color:var(--green);">Within Accra</h3>
+          <p><strong>1-2 business days</strong></p>
+          <p>Same-day delivery available for orders placed before 2 PM</p>
+        </div>
+        <div style="padding:20px;border:1px solid #eee;border-radius:var(--radius);">
+          <h3 style="color:var(--gold);">Within Ghana</h3>
+          <p><strong>3-5 business days</strong></p>
+          <p>Express delivery available to major cities</p>
+        </div>
+        <div style="padding:20px;border:1px solid #eee;border-radius:var(--radius);">
+          <h3 style="color:var(--red);">International</h3>
+          <p><strong>7-14 business days</strong></p>
+          <p>Tracked shipping to most countries worldwide</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin:40px 0;">
+      <h2>Shipping Rates</h2>
+      <table style="width:100%;border-collapse:collapse;margin:20px 0;">
+        <thead>
+          <tr style="background:#f5f5f5;">
+            <th style="padding:12px;text-align:left;border:1px solid #ddd;">Destination</th>
+            <th style="padding:12px;text-align:left;border:1px solid #ddd;">Standard</th>
+            <th style="padding:12px;text-align:left;border:1px solid #ddd;">Express</th>
+            <th style="padding:12px;text-align:left;border:1px solid #ddd;">Free Shipping</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:12px;border:1px solid #ddd;">Accra</td>
+            <td style="padding:12px;border:1px solid #ddd;">GHS 15</td>
+            <td style="padding:12px;border:1px solid #ddd;">GHS 25</td>
+            <td style="padding:12px;border:1px solid #ddd;">Orders over GHS 200</td>
+          </tr>
+          <tr>
+            <td style="padding:12px;border:1px solid #ddd;">Greater Accra Region</td>
+            <td style="padding:12px;border:1px solid #ddd;">GHS 25</td>
+            <td style="padding:12px;border:1px solid #ddd;">GHS 40</td>
+            <td style="padding:12px;border:1px solid #ddd;">Orders over GHS 300</td>
+          </tr>
+          <tr>
+            <td style="padding:12px;border:1px solid #ddd;">Other Regions</td>
+            <td style="padding:12px;border:1px solid #ddd;">GHS 35</td>
+            <td style="padding:12px;border:1px solid #ddd;">GHS 55</td>
+            <td style="padding:12px;border:1px solid #ddd;">Orders over GHS 400</td>
+          </tr>
+          <tr>
+            <td style="padding:12px;border:1px solid #ddd;">International</td>
+            <td style="padding:12px;border:1px solid #ddd;">Varies by destination</td>
+            <td style="padding:12px;border:1px solid #ddd;">Varies by destination</td>
+            <td style="padding:12px;border:1px solid #ddd;">Orders over GHS 800</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section style="margin:40px 0;">
+      <h2>Shipping Policies</h2>
+      
+      <h3>Processing Time</h3>
+      <p>Orders are processed within 1-2 business days. Custom orders may take 3-5 business days to process.</p>
+      
+      <h3>Shipping Partners</h3>
+      <p>We work with trusted local and international shipping partners including:</p>
+      <ul>
+        <li>DHL Express (International)</li>
+        <li>Ghana Post (Domestic)</li>
+        <li>Zipline (Same-day delivery in Accra)</li>
+        <li>Local courier services</li>
+      </ul>
+      
+      <h3>Tracking</h3>
+      <p>All orders include tracking information. You'll receive a tracking number via email once your order ships.</p>
+      
+      <h3>International Shipping</h3>
+      <p>International customers are responsible for:</p>
+      <ul>
+        <li>Customs duties and taxes</li>
+        <li>Import fees (if applicable)</li>
+        <li>Providing accurate shipping addresses</li>
+      </ul>
+      
+      <h3>Delivery Issues</h3>
+      <p>If you experience any delivery issues, please contact us immediately at hello@akwaabathreads.com. We'll work with our shipping partners to resolve any problems.</p>
+    </section>
+
+    <section style="margin:40px 0;padding:20px;background:var(--bg);border-radius:var(--radius);">
+      <h2>Need Help?</h2>
+      <p>Have questions about shipping? Our customer service team is here to help.</p>
+      <div style="display:flex;gap:16px;margin-top:16px;">
+        <a href="mailto:hello@akwaabathreads.com" class="btn primary">Email Us</a>
+        <a href="tel:+233501234567" class="btn">Call Us</a>
+        <a href="faq.html" class="btn">View FAQ</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">GHS 0.00</strong>
+      </div>
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>

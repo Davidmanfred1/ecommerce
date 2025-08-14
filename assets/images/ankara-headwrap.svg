@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f9fa"/>
+      <stop offset="1" stop-color="#e9ecef"/>
+    </linearGradient>
+    <pattern id="ankaraPattern1" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+      <rect width="25" height="25" fill="#EF3340"/>
+      <circle cx="12.5" cy="12.5" r="8" fill="#FDB913"/>
+      <circle cx="12.5" cy="12.5" r="4" fill="#009739"/>
+    </pattern>
+    <pattern id="ankaraPattern2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#009739"/>
+      <rect x="5" y="5" width="10" height="10" fill="#FDB913"/>
+      <circle cx="10" cy="10" r="3" fill="#EF3340"/>
+    </pattern>
+    <pattern id="ankaraPattern3" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="#FDB913"/>
+      <path d="M15 5 L25 15 L15 25 L5 15 Z" fill="#EF3340"/>
+      <circle cx="15" cy="15" r="3" fill="#009739"/>
+    </pattern>
+    <filter id="wrapShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg8)"/>
+  
+  <!-- Headwrap 1 (folded) -->
+  <g transform="translate(80, 50)">
+    <path d="M0 0 Q50 -10 100 0 L100 60 Q50 70 0 60 Z" fill="url(#ankaraPattern1)" filter="url(#wrapShadow)"/>
+    <path d="M10 10 Q50 5 90 10 L90 50 Q50 55 10 50 Z" fill="url(#ankaraPattern1)" opacity="0.8"/>
+    <!-- Fold lines -->
+    <line x1="20" y1="15" x2="80" y2="15" stroke="#000" stroke-width="0.5" opacity="0.3"/>
+    <line x1="20" y1="45" x2="80" y2="45" stroke="#000" stroke-width="0.5" opacity="0.3"/>
+  </g>
+  
+  <!-- Headwrap 2 (partially unfolded) -->
+  <g transform="translate(220, 40)">
+    <path d="M0 0 Q60 -15 120 0 L120 80 Q60 95 0 80 Z" fill="url(#ankaraPattern2)" filter="url(#wrapShadow)"/>
+    <path d="M80 20 Q100 15 120 25 L110 60 Q90 65 80 55 Z" fill="url(#ankaraPattern2)" opacity="0.9"/>
+    <!-- Flowing edge -->
+    <path d="M100 30 Q130 25 140 40 Q135 55 120 50" fill="url(#ankaraPattern2)" opacity="0.7"/>
+  </g>
+  
+  <!-- Headwrap 3 (laid flat) -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="300" height="100" rx="10" fill="url(#ankaraPattern3)" filter="url(#wrapShadow)"/>
+    <!-- Fabric drape -->
+    <path d="M0 20 Q150 10 300 20 L300 80 Q150 90 0 80 Z" fill="url(#ankaraPattern3)" opacity="0.8"/>
+    <!-- Edge details -->
+    <rect x="0" y="0" width="300" height="5" fill="#8B4513"/>
+    <rect x="0" y="95" width="300" height="5" fill="#8B4513"/>
+  </g>
+  
+  <!-- Fabric texture and highlights -->
+  <g opacity="0.2">
+    <ellipse cx="130" cy="80" rx="15" ry="8" fill="#fff"/>
+    <ellipse cx="270" cy="70" rx="12" ry="6" fill="#fff"/>
+    <ellipse cx="200" cy="200" rx="20" ry="10" fill="#fff"/>
+  </g>
+  
+  <!-- Shadow -->
+  <ellipse cx="200" cy="280" rx="120" ry="15" fill="#000" opacity="0.1"/>
+  
+  <!-- Labels -->
+  <text x="130" y="130" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Pattern A</text>
+  <text x="280" y="130" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Pattern B</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Pattern C</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="650" viewBox="0 0 400 650" fill="none">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fefefe"/>
+      <stop offset="1" stop-color="#f5f5f5"/>
+    </linearGradient>
+    <pattern id="africanPrint" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="#009739"/>
+      <circle cx="15" cy="15" r="10" fill="#FDB913"/>
+      <circle cx="15" cy="15" r="5" fill="#EF3340"/>
+      <path d="M5 5 L10 10 M25 5 L20 10 M5 25 L10 20 M25 25 L20 20" stroke="#111" stroke-width="2"/>
+    </pattern>
+    <filter id="jumpsuitShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="650" fill="url(#bg6)"/>
+  
+  <!-- Jumpsuit top -->
+  <path d="M140 60 Q140 50 150 50 L250 50 Q260 50 260 60 L260 80 L270 100 L270 220 L130 220 L130 100 L140 80 Z" fill="url(#africanPrint)" filter="url(#jumpsuitShadow)"/>
+  
+  <!-- Sleeves -->
+  <ellipse cx="110" cy="90" rx="20" ry="35" fill="url(#africanPrint)" transform="rotate(-15 110 90)"/>
+  <ellipse cx="290" cy="90" rx="20" ry="35" fill="url(#africanPrint)" transform="rotate(15 290 90)"/>
+  
+  <!-- Neckline -->
+  <path d="M180 50 Q200 65 220 50" fill="none" stroke="#fff" stroke-width="3"/>
+  
+  <!-- Waist belt -->
+  <rect x="130" y="210" width="140" height="12" fill="#8B4513"/>
+  <rect x="190" y="212" width="20" height="8" fill="#654321"/>
+  
+  <!-- Wide leg pants -->
+  <path d="M130 220 L130 580 L80 600 Q70 605 75 610 L160 610 Q170 610 170 600 L170 580 L170 220" fill="url(#africanPrint)"/>
+  <path d="M270 220 L270 580 L320 600 Q330 605 325 610 L240 610 Q230 610 230 600 L230 580 L230 220" fill="url(#africanPrint)"/>
+  
+  <!-- Center seam -->
+  <line x1="200" y1="220" x2="200" y2="580" stroke="#006d2c" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Pockets -->
+  <rect x="150" y="250" width="25" height="20" rx="3" fill="none" stroke="#006d2c" stroke-width="1"/>
+  <rect x="225" y="250" width="25" height="20" rx="3" fill="none" stroke="#006d2c" stroke-width="1"/>
+  
+  <!-- Fabric flow lines -->
+  <g stroke="#fff" stroke-width="1" opacity="0.3">
+    <path d="M140 300 Q200 310 260 300"/>
+    <path d="M130 400 Q200 410 270 400"/>
+    <path d="M120 500 Q200 510 280 500"/>
+  </g>
+  
+  <!-- Shadow -->
+  <ellipse cx="200" cy="630" rx="100" ry="15" fill="#000" opacity="0.1"/>
+  
+  <!-- Highlights -->
+  <g opacity="0.4">
+    <ellipse cx="180" cy="120" rx="15" ry="8" fill="#fff"/>
+    <ellipse cx="220" cy="160" rx="12" ry="6" fill="#fff"/>
+  </g>
+</svg>

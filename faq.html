@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ — Akwaaba Threads</title>
+  <meta name="description" content="Frequently asked questions about Akwaaba Threads products, shipping, and returns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="about.html">About</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container" style="margin:40px auto;">
+    <h1>Frequently Asked Questions</h1>
+    
+    <div class="faq-section" style="margin:40px 0;">
+      <h2>Orders & Payment</h2>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">How do I place an order? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Simply browse our products, add items to your cart, and proceed to checkout. You'll need to provide your email address and payment information. We accept payments through Paystack for secure transactions.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">What payment methods do you accept? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>We accept all major credit cards, debit cards, and mobile money payments through Paystack. All transactions are secure and encrypted.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">Can I modify or cancel my order? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>You can modify or cancel your order within 1 hour of placing it. After that, please contact our customer service team at hello@akwaabathreads.com for assistance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section" style="margin:40px 0;">
+      <h2>Shipping & Delivery</h2>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">How long does shipping take? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Within Accra: 1-2 business days<br>
+          Within Ghana: 3-5 business days<br>
+          International: 7-14 business days</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">What are the shipping costs? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Free shipping within Accra for orders over GHS 200. Standard shipping rates apply for other locations. International shipping costs vary by destination.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">Do you ship internationally? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Yes! We ship to most countries worldwide. Shipping costs and delivery times vary by destination. International customers are responsible for any customs duties or taxes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section" style="margin:40px 0;">
+      <h2>Products & Sizing</h2>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">How do I choose the right size? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Each product page includes detailed size information. Our sizes generally follow international standards. If you're unsure, we recommend ordering one size up for a comfortable fit.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">Are your products authentic Ghanaian designs? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Yes! All our designs are inspired by authentic Ghanaian cultural patterns and symbols. We work with local artisans and respect traditional craftsmanship while creating modern, wearable pieces.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">What materials do you use? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>We use high-quality cotton, cotton blends, and authentic African fabrics like Ankara and Kente. All materials are carefully selected for comfort, durability, and cultural authenticity.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section" style="margin:40px 0;">
+      <h2>Returns & Exchanges</h2>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">What is your return policy? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>We accept returns within 30 days of delivery. Items must be unworn, unwashed, and in original condition with tags attached. See our <a href="returns.html">Returns Policy</a> for full details.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">How do I exchange an item? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Contact our customer service team to initiate an exchange. We'll provide you with return instructions and help you order the correct size or different item.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section" style="margin:40px 0;">
+      <h2>Account & Support</h2>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">Do I need an account to shop? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>No, you can shop as a guest. However, creating an account allows you to track orders, save your wishlist, and enjoy faster checkout for future purchases.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+        <h3 style="cursor:pointer;" onclick="toggleFaq(this)">How can I contact customer service? ▼</h3>
+        <div class="faq-answer" style="display:none;margin-top:8px;color:var(--muted);">
+          <p>Email: hello@akwaabathreads.com<br>
+          Phone/WhatsApp: +233 50 123 4567<br>
+          Business hours: Monday-Friday 9AM-6PM, Saturday 10AM-4PM (GMT)</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin:40px 0;padding:20px;background:var(--bg);border-radius:var(--radius);">
+      <h3>Still have questions?</h3>
+      <p>We're here to help! Contact our customer service team.</p>
+      <a href="mailto:hello@akwaabathreads.com" class="btn primary">Contact Us</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">GHS 0.00</strong>
+      </div>
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const isOpen = answer.style.display === 'block';
+      
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+      document.querySelectorAll('.faq-item h3').forEach(h => h.textContent = h.textContent.replace('▲', '▼'));
+      
+      // Toggle current item
+      if (!isOpen) {
+        answer.style.display = 'block';
+        element.textContent = element.textContent.replace('▼', '▲');
+      }
+    }
+  </script>
+</body>
+</html>

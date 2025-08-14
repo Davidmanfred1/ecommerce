@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f9fa"/>
+      <stop offset="1" stop-color="#e9ecef"/>
+    </linearGradient>
+    <radialGradient id="capGradient" cx="0.5" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#2d5a27"/>
+      <stop offset="1" stop-color="#1a3d1a"/>
+    </radialGradient>
+    <filter id="capShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg4)"/>
+
+  <!-- Cap crown -->
+  <ellipse cx="200" cy="180" rx="120" ry="80" fill="url(#capGradient)" filter="url(#capShadow)"/>
+
+  <!-- Cap brim -->
+  <ellipse cx="200" cy="240" rx="140" ry="25" fill="#1a3d1a"/>
+  <ellipse cx="200" cy="235" rx="140" ry="25" fill="#2d5a27"/>
+
+  <!-- Adinkra symbol: Gye Nyame (Except God) -->
+  <g transform="translate(200, 180)" fill="#FDB913" stroke="#FFD700" stroke-width="1">
+    <!-- Main symbol -->
+    <circle cx="0" cy="0" r="25" fill="none" stroke-width="3"/>
+    <path d="M0 -15 L0 15 M-10 -10 L10 -10 M-10 10 L10 10" stroke-width="2"/>
+    <circle cx="0" cy="0" r="8" fill="#FDB913"/>
+    <path d="M-15 -15 L-8 -8 M15 -15 L8 -8 M-15 15 L-8 8 M15 15 L8 8" stroke-width="2"/>
+  </g>
+
+  <!-- Secondary Adinkra symbols -->
+  <g fill="#FFD700" opacity="0.7">
+    <circle cx="150" cy="160" r="3"/>
+    <path d="M150 157 L150 163 M147 160 L153 160"/>
+    <circle cx="250" cy="160" r="3"/>
+    <path d="M250 157 L250 163 M247 160 L253 160"/>
+  </g>
+
+  <!-- Cap texture lines -->
+  <g stroke="#1a3d1a" stroke-width="1" opacity="0.3">
+    <path d="M100 160 Q200 140 300 160"/>
+    <path d="M110 180 Q200 160 290 180"/>
+    <path d="M120 200 Q200 180 280 200"/>
+  </g>
+
+  <!-- Adjustable strap -->
+  <rect x="180" y="260" width="40" height="8" rx="4" fill="#8B4513"/>
+  <rect x="185" y="262" width="6" height="4" rx="2" fill="#654321"/>
+  <rect x="195" y="262" width="6" height="4" rx="2" fill="#654321"/>
+  <rect x="205" y="262" width="6" height="4" rx="2" fill="#654321"/>
+
+  <!-- Highlights -->
+  <ellipse cx="170" cy="150" rx="20" ry="12" fill="#4a7c59" opacity="0.6"/>
+  <ellipse cx="230" cy="170" rx="15" ry="8" fill="#4a7c59" opacity="0.4"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="380" rx="80" ry="12" fill="#000" opacity="0.15"/>
+</svg>

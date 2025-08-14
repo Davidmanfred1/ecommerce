@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Akwaaba Threads | Ghanaian Fashion & Culture</title>
+  <meta name="description" content="Discover the stories behind Ghanaian fashion, Kente history, Ankara styling tips, and Adinkra symbol meanings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="about.html">About</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="mobile-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+        <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+          🛒 <span id="cartCount" class="badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / Blog
+    </div>
+
+    <section class="blog-hero" style="text-align:center;margin:40px 0;">
+      <h1>Stories of Ghanaian Fashion</h1>
+      <p style="font-size:1.1rem;color:var(--muted);max-width:600px;margin:0 auto;">
+        Explore the rich heritage, cultural significance, and modern evolution of Ghanaian fashion and textiles.
+      </p>
+    </section>
+
+    <section class="blog-section">
+      <div class="blog-grid" id="blogGrid">
+        <!-- Blog posts will be loaded here -->
+      </div>
+    </section>
+
+    <section class="newsletter-signup" style="background:#f9f9f9;padding:40px;border-radius:var(--radius);margin:40px 0;text-align:center;">
+      <h3>Stay Updated</h3>
+      <p>Get the latest fashion tips, cultural insights, and new arrivals delivered to your inbox.</p>
+      <form id="blogNewsletterForm" style="display:flex;gap:8px;justify-content:center;margin-top:16px;max-width:400px;margin-left:auto;margin-right:auto;">
+        <input type="email" id="blogNewsletterEmail" placeholder="Enter your email" required class="input" style="flex:1;">
+        <button type="submit" class="btn primary">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:20px 0;">
+        <div>
+          <h4>Quick Links</h4>
+          <ul style="list-style:none;padding:0;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul style="list-style:none;padding:0;">
+            <li><a href="shipping.html">Shipping Info</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <p>Stay connected for the latest updates and cultural stories.</p>
+          <div style="display:flex;gap:12px;">
+            <a href="#" style="text-decoration:none;">📘 Facebook</a>
+            <a href="#" style="text-decoration:none;">📷 Instagram</a>
+            <a href="#" style="text-decoration:none;">🐦 Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid #eee;padding-top:20px;text-align:center;">
+        <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="discount-section">
+        <div style="display:flex;gap:8px;">
+          <input id="discountCode" class="input" type="text" placeholder="Discount code" style="flex:1;">
+          <button id="applyDiscountBtn" class="btn">Apply</button>
+        </div>
+        <div id="discountMessage" class="discount-message"></div>
+      </div>
+      
+      <div class="shipping-section">
+        <select id="shippingLocation" class="input" onchange="calculateShipping()">
+          <option value="">Select shipping location</option>
+          <option value="accra">Accra - GHS 15</option>
+          <option value="greater-accra">Greater Accra - GHS 25</option>
+          <option value="other-regions">Other Regions - GHS 35</option>
+          <option value="international">International - Varies</option>
+        </select>
+        <div id="shippingCost" class="shipping-cost"></div>
+      </div>
+      
+      <div class="totals">
+        <div class="total-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">GHS 0.00</span>
+        </div>
+        <div class="total-line" id="discountLine" style="display:none;">
+          <span>Discount</span>
+          <span id="discountAmount" style="color:var(--green);">-GHS 0.00</span>
+        </div>
+        <div class="total-line" id="shippingLine" style="display:none;">
+          <span>Shipping</span>
+          <span id="shippingAmount">GHS 0.00</span>
+        </div>
+        <div class="total-line total-final">
+          <strong>Total</strong>
+          <strong id="cartTotal">GHS 0.00</strong>
+        </div>
+      </div>
+      
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    // Load blog posts
+    document.addEventListener('DOMContentLoaded', () => {
+      const blogPosts = loadBlogPosts();
+      const grid = qs('#blogGrid');
+      
+      grid.innerHTML = blogPosts.map(post => `
+        <article class="blog-post">
+          <img src="${post.image}" alt="${post.title}" loading="lazy">
+          <div class="blog-post-content">
+            <h3>${post.title}</h3>
+            <div class="blog-post-meta">
+              By ${post.author} • ${new Date(post.date).toLocaleDateString()}
+            </div>
+            <p class="blog-post-excerpt">${post.excerpt}</p>
+            <a href="blog-post.html?id=${post.id}" class="btn">Read More</a>
+          </div>
+        </article>
+      `).join('');
+      
+      // Newsletter form
+      qs('#blogNewsletterForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = qs('#blogNewsletterEmail').value;
+        if (subscribeToNewsletter(email)) {
+          qs('#blogNewsletterEmail').value = '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

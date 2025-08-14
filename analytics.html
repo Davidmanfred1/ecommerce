@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analytics Dashboard — Akwaaba Threads</title>
+  <meta name="description" content="Business analytics and insights for Akwaaba Threads.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script defer src="analytics.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="account.html">Account</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container analytics-dashboard">
+    <div class="dashboard-header">
+      <h1>Analytics Dashboard</h1>
+      <div class="date-range">
+        <select id="dateRange">
+          <option value="7">Last 7 days</option>
+          <option value="30" selected>Last 30 days</option>
+          <option value="90">Last 90 days</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">💰</div>
+        <div class="metric-content">
+          <div class="metric-value" id="totalRevenue">GHS 0</div>
+          <div class="metric-label">Total Revenue</div>
+          <div class="metric-change positive" id="revenueChange">+0%</div>
+        </div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-icon">🛒</div>
+        <div class="metric-content">
+          <div class="metric-value" id="totalOrders">0</div>
+          <div class="metric-label">Total Orders</div>
+          <div class="metric-change positive" id="ordersChange">+0%</div>
+        </div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-icon">👥</div>
+        <div class="metric-content">
+          <div class="metric-value" id="totalCustomers">0</div>
+          <div class="metric-label">Total Customers</div>
+          <div class="metric-change positive" id="customersChange">+0%</div>
+        </div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-content">
+          <div class="metric-value" id="avgOrderValue">GHS 0</div>
+          <div class="metric-label">Avg Order Value</div>
+          <div class="metric-change positive" id="aovChange">+0%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+      <div class="chart-container">
+        <h3>Sales Overview</h3>
+        <div class="chart-placeholder" id="salesChart">
+          <div class="chart-bar" style="height:60%"></div>
+          <div class="chart-bar" style="height:80%"></div>
+          <div class="chart-bar" style="height:45%"></div>
+          <div class="chart-bar" style="height:90%"></div>
+          <div class="chart-bar" style="height:70%"></div>
+          <div class="chart-bar" style="height:85%"></div>
+          <div class="chart-bar" style="height:95%"></div>
+        </div>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Top Products</h3>
+        <div id="topProducts" class="top-products-list">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Analytics -->
+    <section class="analytics-details">
+      <div class="analytics-card">
+        <h3>Customer Insights</h3>
+        <div id="customerInsights">
+          <div class="insight-item">
+            <span>New Customers</span>
+            <span id="newCustomers">0</span>
+          </div>
+          <div class="insight-item">
+            <span>Returning Customers</span>
+            <span id="returningCustomers">0</span>
+          </div>
+          <div class="insight-item">
+            <span>Customer Retention Rate</span>
+            <span id="retentionRate">0%</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="analytics-card">
+        <h3>Product Performance</h3>
+        <div id="productPerformance">
+          <div class="insight-item">
+            <span>Most Viewed Product</span>
+            <span id="mostViewed">-</span>
+          </div>
+          <div class="insight-item">
+            <span>Best Selling Category</span>
+            <span id="bestCategory">-</span>
+          </div>
+          <div class="insight-item">
+            <span>Inventory Alerts</span>
+            <span id="inventoryAlerts" class="alert">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="analytics-card">
+        <h3>Marketing Performance</h3>
+        <div id="marketingPerformance">
+          <div class="insight-item">
+            <span>Newsletter Subscribers</span>
+            <span id="newsletterSubs">0</span>
+          </div>
+          <div class="insight-item">
+            <span>Social Shares</span>
+            <span id="socialShares">0</span>
+          </div>
+          <div class="insight-item">
+            <span>Referral Conversions</span>
+            <span id="referralConversions">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="recent-activity">
+      <h3>Recent Activity</h3>
+      <div id="recentActivity" class="activity-list">
+        <!-- Will be populated by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

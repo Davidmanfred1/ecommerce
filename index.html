@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akwaaba Threads — Authentic Ghanaian Clothing & Fashion | Shop Kente, Ankara & Traditional Wear</title>
+  <meta name="description" content="Discover authentic Ghanaian fashion at Akwaaba Threads. Shop premium Kente shirts, Ankara dresses, traditional smocks & accessories. Free shipping in Accra. Secure Paystack checkout.">
+  <meta name="keywords" content="Ghanaian clothing, Kente shirts, Ankara dresses, African fashion, traditional wear, Ghana fashion, Adinkra, Dashiki, African prints">
+  <meta name="author" content="Akwaaba Threads">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://akwaabathreads.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akwaabathreads.com/">
+  <meta property="og:title" content="Akwaaba Threads — Authentic Ghanaian Clothing & Fashion">
+  <meta property="og:description" content="Discover authentic Ghanaian fashion. Shop premium Kente shirts, Ankara dresses, traditional smocks & accessories.">
+  <meta property="og:image" content="https://akwaabathreads.com/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="Akwaaba Threads">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://akwaabathreads.com/">
+  <meta property="twitter:title" content="Akwaaba Threads — Authentic Ghanaian Clothing & Fashion">
+  <meta property="twitter:description" content="Discover authentic Ghanaian fashion. Shop premium Kente shirts, Ankara dresses, traditional smocks & accessories.">
+  <meta property="twitter:image" content="https://akwaabathreads.com/assets/images/og-image.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Akwaaba Threads",
+    "description": "Authentic Ghanaian clothing and fashion store",
+    "url": "https://akwaabathreads.com",
+    "logo": "https://akwaabathreads.com/assets/images/logo.svg",
+    "image": "https://akwaabathreads.com/assets/images/og-image.jpg",
+    "telephone": "+233501234567",
+    "email": "hello@akwaabathreads.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Liberation Road",
+      "addressLocality": "Osu",
+      "addressRegion": "Greater Accra",
+      "addressCountry": "Ghana"
+    },
+    "currenciesAccepted": "GHS",
+    "paymentAccepted": "Credit Card, Debit Card, Mobile Money",
+    "priceRange": "GHS 50 - GHS 500"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="#products">Shop</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="about.html">About</a>
+        <a href="account.html">Account</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="mobile-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+        <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+          🛒 <span id="cartCount" class="badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Wear Ghana. Wear Confidence.</h1>
+        <p>Authentic Ghanaian shirts and modern apparel inspired by Kente, Adinkra and the colors of the Black Star.</p>
+        <a class="btn primary" href="#products">Shop New Arrivals</a>
+      </div>
+      <img src="assets/images/hero.svg" alt="Ghanaian fashion" class="hero-art" />
+    </div>
+  </section>
+
+  <main class="container" id="products">
+    <div class="section-head">
+      <h2>Featured Products</h2>
+      <div class="spacer"></div>
+      <div class="filters">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="Shirts">Shirts</button>
+        <button class="chip" data-filter="Dresses">Dresses</button>
+        <button class="chip" data-filter="Blazers">Blazers</button>
+        <button class="chip" data-filter="Traditional">Traditional</button>
+        <button class="chip" data-filter="Jumpsuits">Jumpsuits</button>
+        <button class="chip" data-filter="Accessories">Accessories</button>
+      </div>
+    </div>
+
+    <div class="search-filters">
+      <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search products..." autocomplete="off">
+        <button class="search-btn" onclick="updateSearch(qs('#searchInput').value)">🔍</button>
+        <div id="searchSuggestions" class="search-suggestions"></div>
+      </div>
+      <div class="filter-group">
+        <label>Sort by:</label>
+        <select class="filter-select" id="sortSelect" onchange="updateSort(this.value)">
+          <option value="name">Name</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Rating</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Price Range:</label>
+        <select class="filter-select" id="priceFilter" onchange="updatePriceFilter(this.value)">
+          <option value="0,1000">All Prices</option>
+          <option value="0,100">Under GHS 100</option>
+          <option value="100,200">GHS 100 - 200</option>
+          <option value="200,300">GHS 200 - 300</option>
+          <option value="300,1000">Over GHS 300</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="productGrid" class="product-grid" aria-live="polite"></div>
+  </main>
+
+  <section id="about" class="about container">
+    <h2>About Akwaaba Threads</h2>
+    <p>Designed in Accra, made for the world. We celebrate Ghanaian craft with contemporary style and quality you can feel.</p>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h2>Stay Connected</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:20px 0;">
+      <div>
+        <h3>Newsletter</h3>
+        <p>Get the latest updates on new arrivals, sales, and Ghanaian fashion trends.</p>
+        <form id="newsletterForm" style="display:flex;gap:8px;margin-top:12px;">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required class="input" style="flex:1;">
+          <button type="submit" class="btn primary">Subscribe</button>
+        </form>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <p>Email: hello@akwaabathreads.com<br>
+        Phone/WhatsApp: +233 50 123 4567<br>
+        Address: 123 Liberation Road, Osu, Accra</p>
+        <div style="margin-top:12px;">
+          <a href="mailto:hello@akwaabathreads.com" class="btn">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <!-- Discount Code -->
+      <div class="discount-section">
+        <div style="display:flex;gap:8px;">
+          <input id="discountCode" class="input" type="text" placeholder="Discount code" style="flex:1;">
+          <button id="applyDiscountBtn" class="btn">Apply</button>
+        </div>
+        <div id="discountMessage" class="discount-message"></div>
+      </div>
+
+      <!-- Shipping Calculator -->
+      <div class="shipping-section">
+        <select id="shippingLocation" class="input" onchange="calculateShipping()">
+          <option value="">Select shipping location</option>
+          <option value="accra">Accra - GHS 15</option>
+          <option value="greater-accra">Greater Accra - GHS 25</option>
+          <option value="other-regions">Other Regions - GHS 35</option>
+          <option value="international">International - Varies</option>
+        </select>
+        <div id="shippingCost" class="shipping-cost"></div>
+      </div>
+
+      <!-- Totals -->
+      <div class="totals">
+        <div class="total-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">GHS 0.00</span>
+        </div>
+        <div class="total-line" id="discountLine" style="display:none;">
+          <span>Discount</span>
+          <span id="discountAmount" style="color:var(--green);">-GHS 0.00</span>
+        </div>
+        <div class="total-line" id="shippingLine" style="display:none;">
+          <span>Shipping</span>
+          <span id="shippingAmount">GHS 0.00</span>
+        </div>
+        <div class="total-line total-final">
+          <strong>Total</strong>
+          <strong id="cartTotal">GHS 0.00</strong>
+        </div>
+      </div>
+
+      <!-- Saved for Later -->
+      <div class="saved-for-later" id="savedForLater" style="display:none;">
+        <h4>Saved for Later</h4>
+        <div id="savedItems"></div>
+      </div>
+
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div id="quickViewModal" class="modal" aria-hidden="true">
+    <div class="modal-content quick-view">
+      <button class="close-modal" onclick="closeModal('quickViewModal')">✕</button>
+      <div id="quickViewContent" class="quick-view-content">
+        <!-- Content loaded by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div id="wishlistModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <h3>Added to Wishlist!</h3>
+      <p>Item has been saved to your wishlist.</p>
+      <button class="btn primary" onclick="closeModal('wishlistModal')">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- Product Comparison Modal -->
+  <div id="comparisonModal" class="modal" aria-hidden="true">
+    <div class="modal-content comparison-modal">
+      <button class="close-modal" onclick="closeModal('comparisonModal')">✕</button>
+      <h3>Product Comparison</h3>
+      <div id="comparisonContent" class="comparison-content">
+        <!-- Content loaded by JavaScript -->
+      </div>
+      <button class="btn" onclick="clearComparison()">Clear All</button>
+    </div>
+  </div>
+
+  <!-- Recently Viewed -->
+  <div id="recentlyViewed" class="recently-viewed" style="display:none;">
+    <div class="container">
+      <h3>Recently Viewed</h3>
+      <div id="recentlyViewedItems" class="product-grid">
+        <!-- Items loaded by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Set this to your real Paystack public key. Example: 'pk_live_xxx' or 'pk_test_xxx'
+    window.PAYSTACK_PUBLIC_KEY = 'YOUR_PAYSTACK_PUBLIC_KEY_HERE';
+  </script>
+</body>
+</html>
+

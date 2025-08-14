@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fefefe"/>
+      <stop offset="1" stop-color="#f5f5f5"/>
+    </linearGradient>
+    <pattern id="ankara" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#EF3340"/>
+      <circle cx="20" cy="20" r="15" fill="#FDB913"/>
+      <circle cx="20" cy="20" r="8" fill="#009739"/>
+      <circle cx="20" cy="20" r="3" fill="#111"/>
+      <circle cx="5" cy="5" r="3" fill="#FDB913"/>
+      <circle cx="35" cy="5" r="3" fill="#FDB913"/>
+      <circle cx="5" cy="35" r="3" fill="#FDB913"/>
+      <circle cx="35" cy="35" r="3" fill="#FDB913"/>
+    </pattern>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="600" fill="url(#bg3)"/>
+
+  <!-- Dress silhouette -->
+  <path d="M140 60 Q140 50 150 50 L250 50 Q260 50 260 60 L260 80 L270 100 L270 350 Q270 380 280 400 L320 500 Q325 520 315 520 L85 520 Q75 520 80 500 L120 400 Q130 380 130 350 L130 100 L140 80 Z" fill="url(#ankara)" filter="url(#shadow)"/>
+
+  <!-- Dress bodice -->
+  <path d="M150 50 L250 50 Q260 50 260 60 L260 120 L140 120 Q140 50 150 50" fill="url(#ankara)"/>
+
+  <!-- Sleeves -->
+  <ellipse cx="110" cy="90" rx="20" ry="30" fill="url(#ankara)" transform="rotate(-20 110 90)"/>
+  <ellipse cx="290" cy="90" rx="20" ry="30" fill="url(#ankara)" transform="rotate(20 290 90)"/>
+
+  <!-- Neckline -->
+  <path d="M180 50 Q200 65 220 50" fill="none" stroke="#fff" stroke-width="3"/>
+
+  <!-- Belt/waistline -->
+  <rect x="140" y="180" width="120" height="8" fill="#111" opacity="0.8"/>
+
+  <!-- Dress flow lines -->
+  <path d="M140 200 Q200 220 260 200 L270 350 Q200 370 130 350 Z" fill="none" stroke="#fff" stroke-width="1" opacity="0.3"/>
+
+  <!-- Hem detail -->
+  <path d="M85 520 Q200 510 315 520" fill="none" stroke="#FDB913" stroke-width="3"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="580" rx="100" ry="15" fill="#000" opacity="0.1"/>
+
+  <!-- Fabric highlights -->
+  <g opacity="0.4">
+    <ellipse cx="180" cy="120" rx="15" ry="8" fill="#fff"/>
+    <ellipse cx="220" cy="160" rx="12" ry="6" fill="#fff"/>
+    <ellipse cx="160" cy="200" rx="10" ry="5" fill="#fff"/>
+  </g>
+</svg>

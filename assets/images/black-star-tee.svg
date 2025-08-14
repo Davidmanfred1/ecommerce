@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1f3f4"/>
+      <stop offset="1" stop-color="#e8eaed"/>
+    </linearGradient>
+    <radialGradient id="star" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFD700"/>
+      <stop offset="1" stop-color="#FFA500"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg2)"/>
+
+  <!-- T-shirt silhouette -->
+  <path d="M120 80 L120 60 Q120 50 130 50 L270 50 Q280 50 280 60 L280 80 L320 100 L320 130 L300 130 L300 420 Q300 440 280 440 L120 440 Q100 440 100 420 L100 130 L80 130 L80 100 Z" fill="#1a1a1a"/>
+
+  <!-- Collar -->
+  <path d="M180 50 L180 75 L200 85 L220 75 L220 50" fill="#1a1a1a"/>
+
+  <!-- Short sleeves -->
+  <ellipse cx="90" cy="110" rx="20" ry="35" fill="#1a1a1a" transform="rotate(-15 90 110)"/>
+  <ellipse cx="310" cy="110" rx="20" ry="35" fill="#1a1a1a" transform="rotate(15 310 110)"/>
+
+  <!-- Black Star of Ghana -->
+  <g transform="translate(200, 200)">
+    <path d="M0 -40 L12 -12 L40 -12 L20 8 L32 36 L0 20 L-32 36 L-20 8 L-40 -12 L-12 -12 Z" fill="url(#star)" stroke="#FFD700" stroke-width="2"/>
+    <!-- Inner star details -->
+    <path d="M0 -25 L7 -7 L25 -7 L12 5 L19 23 L0 12 L-19 23 L-12 5 L-25 -7 L-7 -7 Z" fill="#111" opacity="0.3"/>
+  </g>
+
+  <!-- "GHANA" text -->
+  <text x="200" y="280" text-anchor="middle" font-family="Arial Black" font-size="24" font-weight="bold" fill="#FFD700" stroke="#000" stroke-width="0.5">GHANA</text>
+
+  <!-- Fabric texture -->
+  <g opacity="0.1">
+    <rect x="120" y="80" width="160" height="360" fill="url(#fabricTexture)"/>
+  </g>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="480" rx="80" ry="15" fill="#000" opacity="0.15"/>
+
+  <!-- Subtle highlights -->
+  <path d="M130 60 Q200 55 270 60 L270 80 Q200 75 130 80 Z" fill="#333" opacity="0.3"/>
+  <ellipse cx="150" cy="120" rx="8" ry="15" fill="#333" opacity="0.2"/>
+  <ellipse cx="250" cy="120" rx="8" ry="15" fill="#333" opacity="0.2"/>
+</svg>

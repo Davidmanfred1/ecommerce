@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Account — Akwaaba Threads</title>
+  <meta name="description" content="Manage your account, orders, and wishlist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script defer src="account.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="loginSection" class="account-section">
+      <h2>Login / Register</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:20px 0;">
+        <div class="login-form">
+          <h3>Login</h3>
+          <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required class="input">
+            <input type="password" id="loginPassword" placeholder="Password" required class="input">
+            <button type="submit" class="btn primary full">Login</button>
+          </form>
+        </div>
+        <div class="register-form">
+          <h3>Register</h3>
+          <form id="registerForm">
+            <input type="text" id="registerName" placeholder="Full Name" required class="input">
+            <input type="email" id="registerEmail" placeholder="Email" required class="input">
+            <input type="password" id="registerPassword" placeholder="Password" required class="input">
+            <input type="tel" id="registerPhone" placeholder="Phone Number" class="input">
+            <button type="submit" class="btn primary full">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="accountSection" class="account-section" style="display:none;">
+      <div class="account-header">
+        <h2>My Account</h2>
+        <button class="btn" onclick="logout()">Logout</button>
+      </div>
+      
+      <div class="account-nav">
+        <button class="active" onclick="showAccountTab('profile')">Profile</button>
+        <button onclick="showAccountTab('orders')">Orders</button>
+        <button onclick="showAccountTab('addresses')">Addresses</button>
+        <button onclick="showAccountTab('loyalty')">Loyalty Points</button>
+        <button onclick="showAccountTab('referrals')">Referrals</button>
+      </div>
+
+      <div id="profileTab" class="account-tab">
+        <h3>Profile Information</h3>
+        <form id="profileForm">
+          <input type="text" id="profileName" placeholder="Full Name" required class="input">
+          <input type="email" id="profileEmail" placeholder="Email" required class="input">
+          <input type="tel" id="profilePhone" placeholder="Phone Number" class="input">
+          <button type="submit" class="btn primary">Update Profile</button>
+        </form>
+      </div>
+
+      <div id="ordersTab" class="account-tab" style="display:none;">
+        <h3>Order History</h3>
+        <div id="orderHistory" class="order-history">
+          <!-- Orders will be loaded here -->
+        </div>
+      </div>
+
+      <div id="addressesTab" class="account-tab" style="display:none;">
+        <h3>Shipping Addresses</h3>
+        <div id="addressList">
+          <!-- Addresses will be loaded here -->
+        </div>
+        <button class="btn" onclick="addNewAddress()">Add New Address</button>
+      </div>
+
+      <div id="loyaltyTab" class="account-tab" style="display:none;">
+        <h3>Loyalty Points</h3>
+        <div class="loyalty-overview">
+          <div class="loyalty-card">
+            <h4>Your Points Balance</h4>
+            <div class="points-balance" id="pointsBalance">0 points</div>
+            <div class="points-value" id="pointsValue">Worth GHS 0.00</div>
+          </div>
+          <div class="loyalty-tier">
+            <h4>Membership Tier</h4>
+            <div id="membershipTier">Bronze</div>
+            <div class="tier-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="tierProgress"></div>
+              </div>
+              <div id="tierProgressText">Spend GHS 200 more to reach Silver</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="points-history">
+          <h4>Points History</h4>
+          <div id="pointsHistory">
+            <!-- Points history will be loaded here -->
+          </div>
+        </div>
+
+        <div class="rewards-catalog">
+          <h4>Available Rewards</h4>
+          <div class="rewards-grid" id="rewardsGrid">
+            <!-- Rewards will be loaded here -->
+          </div>
+        </div>
+      </div>
+
+      <div id="referralsTab" class="account-tab" style="display:none;">
+        <h3>Refer Friends & Earn</h3>
+        <div class="referral-overview">
+          <div class="referral-card">
+            <h4>Your Referral Code</h4>
+            <div class="referral-code" id="referralCode">LOADING...</div>
+            <button class="btn" onclick="copyReferralCode()">Copy Code</button>
+          </div>
+          <div class="referral-stats">
+            <div class="stat">
+              <div class="stat-number" id="totalReferrals">0</div>
+              <div class="stat-label">Friends Referred</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="referralEarnings">GHS 0</div>
+              <div class="stat-label">Total Earned</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="referral-how-it-works">
+          <h4>How It Works</h4>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-text">Share your referral code with friends</div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-text">They get 15% off their first order</div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-text">You earn GHS 25 when they spend GHS 100+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="referral-history">
+          <h4>Referral History</h4>
+          <div id="referralHistory">
+            <!-- Referral history will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">GHS 0.00</strong>
+      </div>
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>

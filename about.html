@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — Akwaaba Threads</title>
+  <meta name="description" content="Learn about Akwaaba Threads, our mission, and our commitment to Ghanaian culture and quality.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Akwaaba Threads" class="logo">
+        <span>Akwaaba Threads</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="account.html">Account</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container" style="margin:40px auto;">
+    <section class="about-hero" style="text-align:center;margin:40px 0;">
+      <h1>About Akwaaba Threads</h1>
+      <p style="font-size:1.2rem;color:var(--muted);max-width:600px;margin:0 auto;">
+        Celebrating Ghanaian heritage through contemporary fashion that honors our rich cultural traditions.
+      </p>
+    </section>
+
+    <section class="about-content" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:40px 0;">
+      <div>
+        <h2>Our Story</h2>
+        <p>Founded in the heart of Accra, Akwaaba Threads was born from a passion to share Ghana's vibrant culture with the world. Our name "Akwaaba" means "welcome" in Twi, reflecting our mission to welcome everyone into the beauty of Ghanaian fashion.</p>
+        
+        <p>We believe that clothing is more than fabric—it's a story, a heritage, and a bridge between cultures. Each piece in our collection is carefully designed to honor traditional Ghanaian artistry while meeting the needs of modern life.</p>
+        
+        <h3>Our Mission</h3>
+        <p>To create high-quality, culturally-inspired clothing that celebrates Ghanaian heritage while supporting local artisans and sustainable practices.</p>
+      </div>
+      
+      <div>
+        <h2>Our Values</h2>
+        <ul style="list-style:none;padding:0;">
+          <li style="margin:12px 0;display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--green);font-weight:bold;">✓</span>
+            <strong>Cultural Authenticity:</strong> Respecting and preserving traditional designs
+          </li>
+          <li style="margin:12px 0;display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--green);font-weight:bold;">✓</span>
+            <strong>Quality Craftsmanship:</strong> Using premium materials and expert tailoring
+          </li>
+          <li style="margin:12px 0;display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--green);font-weight:bold;">✓</span>
+            <strong>Community Support:</strong> Working with local artisans and suppliers
+          </li>
+          <li style="margin:12px 0;display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--green);font-weight:bold;">✓</span>
+            <strong>Sustainability:</strong> Environmentally conscious production methods
+          </li>
+          <li style="margin:12px 0;display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--green);font-weight:bold;">✓</span>
+            <strong>Global Reach:</strong> Sharing Ghanaian culture worldwide
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cultural-significance" style="background:#f9f9f9;padding:40px;border-radius:var(--radius);margin:40px 0;">
+      <h2>Cultural Heritage</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:20px 0;">
+        <div>
+          <h3 style="color:var(--gold);">Kente Patterns</h3>
+          <p>Our Kente-inspired designs honor the royal cloth of Ghana, with each pattern telling a story of wisdom, strength, and cultural pride.</p>
+        </div>
+        <div>
+          <h3 style="color:var(--red);">Adinkra Symbols</h3>
+          <p>Traditional Adinkra symbols are woven into our designs, carrying messages of unity, perseverance, and spiritual guidance.</p>
+        </div>
+        <div>
+          <h3 style="color:var(--green);">Ankara Prints</h3>
+          <p>Vibrant Ankara fabrics bring color and life to our collection, celebrating the bold spirit of African fashion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" style="margin:40px 0;">
+      <h2>Meet Our Team</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:20px 0;">
+        <div style="text-align:center;">
+          <div style="width:120px;height:120px;border-radius:50%;background:var(--gold);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:2rem;">👨‍💼</div>
+          <h4>Kwame Asante</h4>
+          <p class="muted">Founder & Creative Director</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:120px;height:120px;border-radius:50%;background:var(--green);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:2rem;">👩‍🎨</div>
+          <h4>Ama Osei</h4>
+          <p class="muted">Head of Design</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:120px;height:120px;border-radius:50%;background:var(--red);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:2rem;">👨‍🏭</div>
+          <h4>Kofi Mensah</h4>
+          <p class="muted">Production Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-info" style="background:var(--bg);padding:40px;border-radius:var(--radius);margin:40px 0;">
+      <h2>Get In Touch</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:20px 0;">
+        <div>
+          <h4>Visit Our Store</h4>
+          <p>123 Liberation Road<br>Osu, Accra<br>Ghana</p>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>Email: hello@akwaabathreads.com<br>Phone: +233 50 123 4567<br>WhatsApp: +233 50 123 4567</p>
+        </div>
+        <div>
+          <h4>Business Hours</h4>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:20px 0;">
+        <div>
+          <h4>Quick Links</h4>
+          <ul style="list-style:none;padding:0;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul style="list-style:none;padding:0;">
+            <li><a href="shipping.html">Shipping Info</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <p>Stay connected for the latest updates and new arrivals.</p>
+          <div style="display:flex;gap:12px;">
+            <a href="#" style="text-decoration:none;">📘 Facebook</a>
+            <a href="#" style="text-decoration:none;">📷 Instagram</a>
+            <a href="#" style="text-decoration:none;">🐦 Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid #eee;padding-top:20px;text-align:center;">
+        <p>© <span id="year"></span> Akwaaba Threads. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Your Cart</h3>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">GHS 0.00</strong>
+      </div>
+      <div class="checkout">
+        <input id="checkoutEmail" class="input" type="email" placeholder="Email for receipt" />
+        <button id="checkoutBtn" class="btn primary full">Checkout Securely</button>
+        <small class="muted">Powered by Paystack. Prices in GHS.</small>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>
